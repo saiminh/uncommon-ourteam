@@ -1,0 +1,27 @@
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+.uncommon-ourteam {
+  width: 100%;
+  height: auto;
+}
+
+.uncommon-ourteam .block-editor-inner-blocks .block-editor-block-list__layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.uncommon-ourteam .block-editor-inner-blocks .block-editor-block-list__layout .uncommon-ourteam-teammember {
+  flex: 0 0 calc(25% - 0.5rem);
+  background-color: var(--wp--preset--color--gallery-off-white);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+/*# sourceMappingURL=index.css.map*/

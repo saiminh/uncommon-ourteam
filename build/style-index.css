@@ -1,0 +1,149 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.uncommon-ourteam {
+  width: 100vw;
+  height: 100svh;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 599px) {
+  .uncommon-ourteam {
+    height: 66svh;
+  }
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember {
+  width: 16vw;
+  height: 16vw;
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 599px) {
+  .uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember {
+    width: 24vw;
+    height: 24vw;
+  }
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-title, .uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-name {
+  display: none;
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-images figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-images figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-images:hover figure {
+  transform: rotate(-5deg);
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-images figure.uncommon-ourteam-teammember-artwork {
+  opacity: 0;
+}
+.uncommon-ourteam:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember .uncommon-ourteam-teammember-images:hover figure.uncommon-ourteam-teammember-artwork {
+  opacity: 1;
+}
+.uncommon-ourteam.uncommon-ourteam--listview {
+  overflow: visible;
+}
+.uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  top: auto;
+  left: auto;
+  transform: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--wp--preset--spacing--outer);
+  width: calc(100% - 2 * var(--wp--preset--spacing--outer));
+  border-top: 1px solid var(--wp--preset--color--pigment-purple);
+}
+.uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember:hover {
+  z-index: 3;
+}
+.uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember .uncommon-ourteam-teammember-title, .uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember .uncommon-ourteam-teammember-name {
+  display: inline-block;
+}
+.uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember .uncommon-ourteam-teammember-images {
+  display: block;
+  position: absolute;
+  width: 16vw;
+  height: 16vw;
+  opacity: 0;
+}
+.uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember:hover .uncommon-ourteam-teammember-images {
+  opacity: 1;
+}
+.uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember:hover .uncommon-ourteam-teammember-images figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.uncommon-ourteam.uncommon-ourteam--listview .uncommon-ourteam-teammember:hover .uncommon-ourteam-teammember-images figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.uncommon-ourteam-title {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 21.5vw;
+  color: var(--wp--preset--color--pigment-purple);
+  margin: 0;
+  padding: 0;
+}
+
+.uncommon-ourteam-switcher {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: var(--wp--preset--color--pigment-purple);
+  border-radius: 2em;
+  font-size: var(--wp--preset--font-size--body-s);
+  padding: 4px;
+  cursor: pointer;
+}
+.uncommon-ourteam-switcher .uncommon-ourteam-switcher-item--explore, .uncommon-ourteam-switcher.uncommon-ourteam-switcher--listview .uncommon-ourteam-switcher-item--list {
+  background-color: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--pigment-purple);
+  border-radius: 2em;
+  padding: 0.15em 0.4em 0.1em 0.4em;
+}
+.uncommon-ourteam-switcher.uncommon-ourteam-switcher--listview .uncommon-ourteam-switcher-item--explore, .uncommon-ourteam-switcher .uncommon-ourteam-switcher-item--list {
+  background-color: var(--wp--preset--color--pigment-purple);
+  color: var(--wp--preset--color--contrast);
+  border-radius: 2em;
+  padding: 0.15em 0.4em 0.1em 0.4em;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
