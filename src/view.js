@@ -33,7 +33,6 @@ function createNewPosition(elem){
         h = container.getBoundingClientRect().height - elemHeight,
         nh = Math.floor(Math.random() * h),
         nw = Math.floor(Math.random() * w);
-        console.log(w, h, nw, nh);
  
   return {
     x: nw,
@@ -72,7 +71,6 @@ function clearAnimation(images){
     clearInterval(interval);
     interval = null;
     motion.animate(image, { x: `0px`, y: `0px` }, { duration: 0 });
-    // motion.animate(image.querySelector('.uncommon-ourteam-teammember-images'), { x: `0px`, y: `0px`, rotate: 0 }, { duration: 0 });
   })
 }
 
