@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       Uncommon Our Team
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       'Our Team' block with flying teammember photos
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Version:           1.0
+ * Author:            Simon Flöter
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       uncommon-ourteam

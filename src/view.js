@@ -8,7 +8,7 @@ function listViewSwitcher(images){
       clearAnimation(images);
       imagesFollowPointerX(images);
     } else {
-      animateImagesLoop(images);
+      setTimeout(()=> {animateImagesLoop(images)}, 30 );
     }
     ourteam.classList.toggle('uncommon-ourteam--listview');
     switcher.classList.toggle('uncommon-ourteam-switcher--listview');
@@ -33,6 +33,7 @@ function createNewPosition(elem){
         h = container.getBoundingClientRect().height - elemHeight,
         nh = Math.floor(Math.random() * h),
         nw = Math.floor(Math.random() * w);
+        console.log(w, h, nw, nh);
  
   return {
     x: nw,
@@ -55,13 +56,13 @@ function animateImagesLoop(images){
   
   images.forEach((image)=>{
     let position = createNewPosition(image);
+    motion.animate(image.querySelector('.uncommon-ourteam-teammember-images'), { x: `0px`, y: `0px`, rotate: `0` }, { duration: 0 });
     motion.animate(image, { x: `${position.x}px`, y: `${position.y}px` }, { duration: 0 });
-    setTimeout( () => {animateImageOnce(image)}, 60);
+    setTimeout( () => { animateImageOnce(image) }, 60);
   })
   interval = setInterval(()=>{
     images.forEach((image)=>{
-      position = createNewPosition(image);
-      setTimeout( () => {animateImageOnce(image)}, 60);
+      setTimeout( () => { animateImageOnce(image) }, 60);
     })
   }, 10060);
 }
@@ -71,6 +72,7 @@ function clearAnimation(images){
     clearInterval(interval);
     interval = null;
     motion.animate(image, { x: `0px`, y: `0px` }, { duration: 0 });
+    // motion.animate(image.querySelector('.uncommon-ourteam-teammember-images'), { x: `0px`, y: `0px`, rotate: 0 }, { duration: 0 });
   })
 }
 
