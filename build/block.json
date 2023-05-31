@@ -2,11 +2,11 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "create-block/uncommon-ourteam",
-  "version": "0.1.0",
+  "version": "1.0",
   "title": "Uncommon Our Team",
   "category": "widgets",
-  "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "icon": "format-gallery",
+  "description": "'Our Team' block with flying teammember photos",
   "supports": {
     "html": false
   },
