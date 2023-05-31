@@ -22,7 +22,6 @@ export default function Edit() {
           ['create-block/uncommon-ourteam-teammember'],
           ['create-block/uncommon-ourteam-teammember']
         ]}
-        templateLock={'all'}
       />
 		</div>
 	);
