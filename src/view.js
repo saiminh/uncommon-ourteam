@@ -8,7 +8,9 @@ function listViewSwitcher(images){
       clearAnimation(images);
       imagesFollowPointerX(images);
     } else {
-      setTimeout(()=> {animateImagesLoop(images)}, 30 );
+      const imagesArray = Array.from(images),
+            firstTenImages = imagesArray.slice(0, 10);
+      setTimeout(()=> {animateImagesLoop(firstTenImages)}, 30 );
     }
     ourteam.classList.toggle('uncommon-ourteam--listview');
     switcher.classList.toggle('uncommon-ourteam-switcher--listview');
@@ -19,7 +21,9 @@ function imagesFollowPointerX(images){
   images.forEach((image)=>{
     image.addEventListener('mousemove', (e)=>{
       if (document.querySelector('.uncommon-ourteam--listview')){
-        motion.animate(image.querySelector('.uncommon-ourteam-teammember-images'), {x: `${e.clientX - 50}px`, y: `-50%`, rotate: `5`}, { duration: 0 })
+        // image.querySelector('.uncommon-ourteam-teammember-images').style.transition = `0.1s all ease-in-out`;
+        image.querySelector('.uncommon-ourteam-teammember-images').style.transform = `translateX(${e.clientX - 50}px) translateY(0px) rotate(5deg)`;
+        // motion.animate(image.querySelector('.uncommon-ourteam-teammember-images'), {x: `${e.clientX - 50}px`, y: `-50%`, rotate: `5`}, { duration: 0 })
       }
     })
   })
@@ -54,6 +58,7 @@ function animateImageOnce(animage){
 function animateImagesLoop(images){
   
   images.forEach((image)=>{
+    image.classList.add('uncommon-ourteam-teammember--animated');
     let position = createNewPosition(image);
     motion.animate(image.querySelector('.uncommon-ourteam-teammember-images'), { x: `0px`, y: `0px`, rotate: `0` }, { duration: 0 });
     motion.animate(image, { x: `${position.x}px`, y: `${position.y}px` }, { duration: 0 });
@@ -75,7 +80,9 @@ function clearAnimation(images){
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  const images = document.querySelectorAll('.uncommon-ourteam-teammember');
+  const images = document.querySelectorAll('.uncommon-ourteam-teammember'),
+        imagesArray = Array.from(images),
+        firstTenImages = imagesArray.slice(0, 10);
   listViewSwitcher(images);
-  animateImagesLoop(images);
+  animateImagesLoop(firstTenImages);
 });

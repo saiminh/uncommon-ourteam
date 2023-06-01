@@ -5,7 +5,7 @@
   overflow: hidden;
 
   @media screen and (max-width: 599px) {
-    height: 66svh;
+    min-height: 66svh;
   }
   
   &:not(.uncommon-ourteam--listview) .uncommon-ourteam-teammember {
@@ -15,6 +15,11 @@
     z-index: 12;
     top: 0;
     left: 0;
+    display: none;
+
+    &.uncommon-ourteam-teammember--animated {
+      display: block;
+    }
 
     @media screen and (max-width: 599px) {
       width: 24vw;
@@ -62,6 +67,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: var(--wp--preset--spacing--outer) 0;
 
     &:before {
       content: 'Our Team:';
@@ -99,10 +105,7 @@
       width: 16vw;
       height: 16vw;
       opacity: 0;
-    }
-    &:hover .uncommon-ourteam-teammember-images {
-      opacity: 1;
-
+      
       & figure {
         position: absolute;
         top: 0;
@@ -122,6 +125,10 @@
         opacity: 0;
         display: none;
       }
+    }
+    &:hover .uncommon-ourteam-teammember-images {
+      opacity: 1;
+
     }
   }
 }
