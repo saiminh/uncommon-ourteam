@@ -90,6 +90,11 @@
     padding: .25em 0;
     width: calc(100% - 2 * var(--wp--preset--spacing--outer));
     border-top: 1px solid var(--wp--preset--color--pigment-purple);
+    
+    @media screen and (max-width: 599px) {
+      flex-wrap: wrap;
+      padding: .5em 0;
+    }
 
     &:hover {
       z-index: 3;
@@ -98,6 +103,19 @@
     & .uncommon-ourteam-teammember-title,
     & .uncommon-ourteam-teammember-name {
       display: inline-block;
+      flex: 0 0 50%;
+      
+      @media screen and (max-width: 599px) {
+        flex: 0 0 100%;
+        font-size: var(--wp--preset--font-size--body-xs);
+      }
+    }
+    & .uncommon-ourteam-teammember-title {
+      text-align: right;
+      @media screen and (max-width: 599px) {
+        text-align: left;
+        color: var(--wp--preset--color--pigment-purple);
+      }
     }
     & .uncommon-ourteam-teammember-images {
       display: block;
